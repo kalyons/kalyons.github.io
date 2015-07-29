@@ -15,3 +15,18 @@ function gestureStart() {
     }
   }
 }
+
+$(window).scroll(function() {
+  if ($(this).scrollTop() > 400) {
+    $('#toTop').fadeIn();
+  } else {
+    $('#toTop').fadeOut();
+  }
+  $height = window.innerHeight / 2;
+});
+
+$('#toTop2').on("click",function() {
+    $('html, body').animate({ scrollTop: 0 }, 'slow', function () {
+        cosole.log("Here");
+    });
+});

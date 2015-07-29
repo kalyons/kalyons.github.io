@@ -6,7 +6,6 @@
 <meta name="description" content="Kevin Lyons, Director, Beyond the Code">
 <meta name="viewport" content="width=device-width, initial-scale=1" /> 
 <link rel="stylesheet" href="http://www.jeffhuang.com/css/bootstrap.min.css">
-<link href="./Kevin Lyons_files/css" rel="stylesheet" type="text/css">
 
 <!-- Icon init -->
 <link rel="apple-touch-icon" sizes="57x57" href="./assets/icon/apple-icon-57x57.png">
@@ -29,9 +28,9 @@
 
 <!-- Just for debugging purposes. Don't actually copy these 2 lines! -->
 <!--[if lt IE 9]><script src="../../assets/js/ie8-responsive-file-warning.js"></script><![endif]-->
-<script src="./bootstrap_files/ie-emulation-modes-warning.js"></script>
-
-
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+<script src="./javascripts/script.js">
+</script>
 <style>
 
 <code>
@@ -120,29 +119,17 @@ h2 {
 	color: white; /*#ffb22a;*/
 	text-shadow: none;/*0 1px 0 #cab89c;*/
 }
-.thumbnail{display:block;line-height:1;border:1px solid #ddd;-webkit-border-radius:4px;-moz-border-radius:4px;border-radius:4px;-webkit-box-shadow:0 1px 1px rgba(0,0,0,0.075);-moz-box-shadow:0 1px 1px rgba(0,0,0,0.075);box-shadow:0 1px 1px rgba(0,0,0,0.075);padding:4px}a.thumbnail:hover{-webkit-box-shadow:0 1px 4px rgba(0,105,214,0.25);-moz-box-shadow:0 1px 4px rgba(0,105,214,0.25);box-shadow:0 1px 4px rgba(0,105,214,0.25);border-color:#0088cc}.thumbnail > img{display:block;margin-left:auto;margin-right:auto}
-</style>
 
-<script type="text/javascript">
-// The function actually applying the offset
-function offsetAnchor() {
-	if(location.hash.length !== 0) {
-		window.scrollTo(window.scrollX, window.scrollY - 100);
-	}
+#toTop {
+	padding: 5px 3px;
+	position: fixed;
+	bottom: $height;
+	right: 5px;
+	display: none;
 }
 
-// This will capture hash changes while on the page
-$(window).on("hashchange", function () {
-	offsetAnchor();
-});
-
-// This is here so that when you enter the page with a hash,
-// it can provide the offset in that case too. Having a timeout
-// seems necessary to allow the browser to jump to the anchor first.
-window.setTimeout(function() {
-	offsetAnchor();
-}, 1); // The delay of 1 is arbitrary and may not always work right (although it did in my testing).
-</script>
+.thumbnail{display:block;line-height:1;border:1px solid #ddd;-webkit-border-radius:4px;-moz-border-radius:4px;border-radius:4px;-webkit-box-shadow:0 1px 1px rgba(0,0,0,0.075);-moz-box-shadow:0 1px 1px rgba(0,0,0,0.075);box-shadow:0 1px 1px rgba(0,0,0,0.075);padding:4px}a.thumbnail:hover{-webkit-box-shadow:0 1px 4px rgba(0,105,214,0.25);-moz-box-shadow:0 1px 4px rgba(0,105,214,0.25);box-shadow:0 1px 4px rgba(0,105,214,0.25);border-color:#0088cc}.thumbnail > img{display:block;margin-left:auto;margin-right:auto}
+</style>
 
 </head>
 
@@ -172,6 +159,8 @@ window.setTimeout(function() {
 		</div>
 
 		<div class="container mainbody">
+			<div id="toTop"><a href="#">Return to Top</a></div>
+			</script>
 			<div class="row">
 				<div class="span9">
 					<div class="row smaller">
@@ -191,6 +180,9 @@ window.setTimeout(function() {
 									<li><a href="#so">Special Olympics Volunteerism</a></li>
 									<li><a href="#best">Best Buddies Support</a></li>
 									<li><a href="#pico">PICOCTF Cybersecurity Challenge</a></li>
+									<li><a href="#rotary">Rotary International Involvement</a></li>
+									<li><a href="#tutoring">Peer Tutoring</a></li>
+									<li><a href="#vip">Volunteers in Practice (VIP) Organization</a></li>
 								</ul>
 							</div>
 							<hr>
@@ -391,6 +383,60 @@ window.setTimeout(function() {
 								</tr>
 							</tbody>
 						</table>
+						<table id="rotary">
+							<tbody>
+								<tr>
+									<td>
+										<div class="logo" style="float: left;">
+											<a>
+												<img src="./assets/Rotary Picture.jpg" 
+												alt="Rotary Picture" border="0" width="300" style="PADDING-RIGHT: 5px; PADDING-BOTTOM: 5px; PADDING-TOP: 10px" align="left"
+												/>
+											</a>
+										</div>
+										<a style="font-family: &#39;Source Sans Pro&#39;, sans-serif; font-size: 1.05em">Rotary International Involvement</a>
+										<br>
+										<p>Local Rotary organizations highlight the best of citizenship and community outreach across all social scenes. Their motto of "Service Above Self" certainly resounds with me each and every day. I have benefitted from involvement in multiple Rotary-organized events:
+											<br><br>(1) For the weekend of May 15-17, 2015, I attended the annual Rotary Youth Leadership Awards (RYLA) at the South Shore Sea Camps in Brewster, Massachusetts. With another group of compassionate individuals, we were able to connect our leadership experiences to that point while also learning invaluable lessons about altruism, understanding and being heard. The new connections that arose from this event were immediate as I now possess more outlets for advice that I know what to do with - a truly satisfying experience.
+											<br><br>(2) As a result of our participation in RYLA 2015, my fellow campers and I were invited to speak at a Rotary sponsored dinner. Sharing our experiences in front of those people responsible for their funding was quite humbling and allowed us to give thanks at a far more personal level than ever before.
+											<br><br>(3) I was invited to return to RYLA next Spring as a Student Leader as a result of my enthusiasm for the program.
+										</p>
+									</td>
+								</tr>
+							</tbody>
+						</table>
+						<table id="tutoring">
+							<tbody>
+								<tr>
+									<td>
+										<a style="font-family: &#39;Source Sans Pro&#39;, sans-serif; font-size: 1.05em">Peer Tutoring</a>
+										<br>
+										<p>I constantly seek to share my passion for certain topics with those students who request or seek it; peer tutoring offers me a concrete paradigm in which to do so. In the past year I have assisted over a dozen students ranging from grades 5-11 in many core academic topics, including multi-level math curricula, history and chemistry. <b>Every peer who I work with has shown statistical improvement in test scoring.</b> Yet far more important to me is their newfound comfort with some challenging course material, gained only by the willingness to seek help and accept support.
+										</p>
+									</td>
+								</tr>
+							</tbody>
+						</table>
+						<table id="vip">
+							<tbody>
+								<tr>
+									<td>
+
+										<div class="logo" style="float: right;">
+											<a>
+												<img src="./assets/VIP Picture.jpg" 
+												alt="VIP Picture" border="0" width="300" style="PADDING-LEFT: 5px; PADDING-BOTTOM: 5px; PADDING-TOP: 10px" align="right"
+												/>
+											</a>
+										</div>
+										<a style="font-family: &#39;Source Sans Pro&#39;, sans-serif; font-size: 1.05em">Volunteers in Practice (VIP) Organization</a>
+										<br>
+										<p>A Weymouth High School-based organization, the VIPs, or Volunteers in Practice, seek to celebrate the most outstanding students who work diligently in the realm of communtity outreach. Students are recognized in front of the entire school population; a pep really even occurred with Kevin Faulk from the New England Patriots paying us a congratulatory visit. The VIP's program newest contribution to the Weymouth community is the Weycathlon, a district-wide field day to honor the volunteerism of students in all grades and schools. <a href="https://www.youtube.com/watch?v=buGA8knNEsM">I served as a lead concierge</a> for my Alma Mater elementary school, again giving back in a profound way for youth fulfillment.
+										</p>
+									</td>
+								</tr>
+							</tbody>
+						</table>
 					</div>
 				</div>
 			</div>
@@ -416,5 +462,4 @@ window.setTimeout(function() {
 				</div>
 			</footer>
 		</div> <!-- /container -->
-		<script type="text/javascript" src="./Kevin Lyons_files/retina.js"></script>
 	</body></html>
