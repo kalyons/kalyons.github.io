@@ -1,0 +1,2 @@
+- Add old image of me, cerca 6th grade, to MITLTI article.
+- Figure out how to add captions to images, HTML.
