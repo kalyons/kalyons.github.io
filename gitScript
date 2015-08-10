@@ -3,19 +3,12 @@
 echo "Running GIT services..."
 
 git status
-
-echo "Enter remote name..."
-read REMOTE
-
-echo "Enter commit message..."
-read MESSAGE
-
 git add --all
 
-if ( ( "$REMOTE" = "" ) || ( "$MESSAGE" = "" ) ) ; then
+if [ "$1" = "" ] ; then
 	echo "Empty string. Exiting script..."
 	exit 0
 else
-	git commit -m "$MESSAGE"
-	git push $REMOTE master
+	git commit -m "$1"
+	git push hub master
 fi
