@@ -98,11 +98,18 @@ td {
 	filter: none;
 }
 #toTop {
-	padding: 5px 3px;
+	padding: 1px 3px;
 	position: fixed;
-	bottom: $height;
 	right: 5px;
 	display: none;
+}
+#experiences {
+	top:0;
+	position: static;
+}
+#achievements {
+	top:0;
+	position: static;
 }
 .left {
 	font-size: 0.8em; text-align: center;
@@ -132,7 +139,7 @@ h2 {
 
 </head>
 
-<body>
+<body onload="loadFunction()">
 	<div class="navbar navbar-static-top hidden-phone">
 		<div class="navbar-inner">
 			<div class="container">
@@ -158,7 +165,6 @@ h2 {
 		</div>
 
 		<div class="container mainbody">
-			<span id="toTop"><a href="javascript:goToTop()">Return to Top</a></span>
 			<div class="row">
 				<div class="span9">
 					<div class="row">
@@ -183,7 +189,9 @@ h2 {
 					<hr>
 					<div class="row smaller">
 						<div class="span9">
-							<h2 id="experiences" style="padding-top: 0px">Experiences</h2>
+							<div class="span9" opacity="0.4" filter: "alpha(opacity=60)" padding="0" margin="0" id="experiences">
+								<h2 style="padding-top: 0px">Experiences</h2>
+							</div>
 							<table>
 								<tbody>
 									<div class="logo">
@@ -363,33 +371,6 @@ h2 {
 									</tr>
 								</tbody>
 							</table>
-							<table>
-								<tbody>
-									<tr>
-										<td>
-											<div class="logo">
-												<a>
-													<img src="./assets/SV Picture.jpg" 
-													alt="SV Picture" border="0" width="200" style="PADDING-RIGHT: 20px; PADDING-BOTTOM: 5px; PADDING-TOP: 10px" align="left"
-													/>
-												</a>
-											</div>
-											<a style="font-family: &#39;Source Sans Pro&#39;, sans-serif; font-size: 1.05em">Student Voice - Director</a>
-											<br>
-											<ul>
-												<li><p>Recruited by Weymouth High School Principal to lead the developing Student Voice program on campus, for the upcoming school year</p></li>
-
-												<li><p>Student Voice seeks to empower students on a number of issues and encourage practical problem solving to meet administrators with resolution</p></li>
-
-												<li><p>Annual summit will be a day-long forum to bring in a diverse student population, hand picked by faculty, to discuss current shortcomings in climate and culture at WHS, and ways to improve these issues</p></li>
-
-												<li><p>I will be facilitating these discussions with the end goal of new programs to reconcile discussed issues.</p></li>
-											</ul>
-											<p><i>We have <a href="https://twitter.com/StudentVoiceWHS" target="_blank">a social media presence</a> and <a href="http://www.weymouthschools.org/weymouth-high-school/family-students/pages/student-voice" target="_blank">a developing website</a>.</i></p>
-										</td>
-									</tr>
-								</tbody>
-							</table>
 							<table style="float:right;">
 								<tbody>
 									<tr>
@@ -399,8 +380,9 @@ h2 {
 									</tr>
 								</tbody>
 							</table>
-							<br>
-							<hr><h2>Achievements</h2>
+							<br><div class="span9" opacity="0.4" filter: "alpha(opacity=60)" id="achievements">
+								<hr><h2 style="padding-top: 0px">Achievements</h2>
+							</div>
 							<table>
 								<tbody>
 									<tr>
