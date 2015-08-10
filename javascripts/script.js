@@ -1,3 +1,4 @@
+var updatedAt = "Updated 08-10-2015";
 var metas = document.getElementsByTagName('meta');
 var i;
 var scrolling = false;
@@ -19,9 +20,23 @@ function gestureStart() {
   }
 }
 
+function notReady() {
+  alert("Whoops! This link is not yet set up as of the last ")
+}
+
 function loadFunction() {
-  OGheight = $("#experiences").position().top;
-  OGheight2 = $("#achievements").position().top;
+  try {
+    document.getElementById("updatedAt").innerHTML = "&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;"+ updatedAt;
+    OGheight = $("#experiences").position().top;
+    OGheight2 = $("#achievements").position().top;
+  }
+  catch (e) {
+    //
+  }
+}
+
+function loadFunction2() {
+  document.getElementById("updatedAt").innerHTML = "&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;"+ updatedAt;
 }
 
 $(window).scroll(function() {
