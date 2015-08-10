@@ -15,6 +15,6 @@ if [ $REMOTE = "" || $MESSAGE = "" ] ; then
 	echo "Empty string. Exiting script..."
 	exit 0
 else
-	git commit -m $MESSAGE
+	git commit -m "$MESSAGE"
 	git push $REMOTE master
 fi
