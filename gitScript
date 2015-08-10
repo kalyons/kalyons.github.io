@@ -11,7 +11,7 @@ echo "Enter commit message..."
 read MESSAGE
 
 git add --all
-if [ $REMOTE = "" || $MESSAGE = "" ] ; then
+if [ $REMOTE == "" || $MESSAGE == "" ] ; then
 	echo "Empty string. Exiting script..."
 	exit 0
 else
