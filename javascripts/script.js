@@ -25,14 +25,14 @@ function loadFunction() {
 }
 
 $(window).scroll(function() {
-  if (!scrolling) {
-    if ($(this).scrollTop() > $("#achievements").position().top && $("#achievements").css('position') != 'fixed') {
+  try {
+    if (!scrolling) {
+      if ($(this).scrollTop() > $("#achievements").position().top && $("#achievements").css('position') != 'fixed') {
         //$("#experiences").css({'position':'static', 'top':'0px'});
         $("#achievements").css({'position':'fixed', 'top':'0px', 'background-color':'#ffffff', 'width':'90%', 'padding':'0', 'margin':'0'});
       }
       else if ($(this).scrollTop() > $("#experiences").position().top && $("#experiences").css('position') != 'fixed') {
         $("#experiences").css({'position':'fixed', 'top':'0px', 'background-color':'#ffffff', 'width':'90%', 'padding':'0', 'margin':'0'});
-        $("#toTop").fadeIn();
       }
       if ($(this).scrollTop() < OGheight2 && $("#achievements").css('position') == 'fixed') {
         $("#achievements").css({'position':'static', 'top':'0px'});
@@ -42,7 +42,11 @@ $(window).scroll(function() {
       }
       $height = window.innerHeight / 2 - 40;
     }
-  });
+  }
+  catch (e) {
+
+  }
+});
 
 function goToTop() {
   $('#toTop').fadeOut();
