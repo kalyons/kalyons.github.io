@@ -1,5 +1,6 @@
 var metas = document.getElementsByTagName('meta');
 var i;
+var scrolling = false;
 if (navigator.userAgent.match(/iPhone/i)) {
   for (i=0; i<metas.length; i++) {
     if (metas[i].name == "viewport") {
@@ -17,16 +18,21 @@ function gestureStart() {
 }
 
 $(window).scroll(function() {
-  if ($(this).scrollTop() > 400) {
-    $('#toTop').fadeIn();
-  } else {
-    $('#toTop').fadeOut();
+  if (!scrolling) {
+    if ($(this).scrollTop() > 400) {
+      $('#toTop').fadeIn();
+    } else {
+      $('#toTop').fadeOut();
+    }
+    $height = window.innerHeight / 2;
   }
-  $height = window.innerHeight / 2;
 });
 
-$('#toTop2').on("click",function() {
-    $('html, body').animate({ scrollTop: 0 }, 'slow', function () {
-        cosole.log("Here");
-    });
-});
+function goToTop() {
+  $('#toTop').fadeOut();
+  scrolling = true;
+  $('html,body').animate({ scrollTop: 0 }, 'slow', function () {
+
+  });
+  scrolling = false;
+}
