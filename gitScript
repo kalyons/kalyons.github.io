@@ -4,5 +4,10 @@ echo "Running GIT services..."
 
 git status
 git add --all
-git commit -m "$1"
-git push hub master
+if [ "$1" = "" ] ; then
+	echo "Empty commit message"
+	exit 0
+else
+	git commit -m "$1"
+	git push hub master
+fi
