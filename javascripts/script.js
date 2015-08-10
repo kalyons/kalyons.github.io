@@ -21,7 +21,7 @@ function gestureStart() {
 }
 
 function notReady() {
-  alert("Whoops! This link is not yet set up as of the last ")
+  alert("Whoops! This link is not yet set up as of " + updatedAt + ". Apologies for any inconvienence this may cause.");
 }
 
 function loadFunction() {
