@@ -1,0 +1,8 @@
+#!/bin/sh
+
+echo "Running GIT services..."
+
+git status
+git add --all
+git commit -m "$1"
+git push hub master
