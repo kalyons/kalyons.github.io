@@ -1,9 +1,10 @@
-var updatedAt = "Updated 08-11-2015";
+var updatedAt = "Updated 08-11`-2015";
 var metas = document.getElementsByTagName('meta');
 var i;
 var scrolling = false;
 var OGheight = null;
 var OGheight2 = null;
+var OGheight3 = null;
 if (navigator.userAgent.match(/iPhone/i)) {
   for (i=0; i<metas.length; i++) {
     if (metas[i].name == "viewport") {
@@ -29,9 +30,10 @@ function loadFunction() {
     document.getElementById("updatedAt").innerHTML = "&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;"+ updatedAt;
     OGheight = $("#experiences").position().top;
     OGheight2 = $("#achievements").position().top;
+    OGheight3 = $("#skills").position().top;
   }
   catch (e) {
-    //
+    
   }
 }
 
@@ -42,12 +44,17 @@ function loadFunction2() {
 $(window).scroll(function() {
   try {
     if (!scrolling) {
-      if ($(this).scrollTop() > $("#achievements").position().top && $("#achievements").css('position') != 'fixed') {
-        //$("#experiences").css({'position':'static', 'top':'0px'});
+      if ($(this).scrollTop() > $("#skills").position().top && $("#skills").css('position') != fixed) {
+        $("#skills").css({'position':'fixed', 'top':'0px', 'background-color':'#ffffff', 'width':'90%', 'padding':'0', 'margin':'0'});
+      }
+      else if ($(this).scrollTop() > $("#achievements").position().top && $("#achievements").css('position') != 'fixed') {
         $("#achievements").css({'position':'fixed', 'top':'0px', 'background-color':'#ffffff', 'width':'90%', 'padding':'0', 'margin':'0'});
       }
       else if ($(this).scrollTop() > $("#experiences").position().top && $("#experiences").css('position') != 'fixed') {
         $("#experiences").css({'position':'fixed', 'top':'0px', 'background-color':'#ffffff', 'width':'90%', 'padding':'0', 'margin':'0'});
+      }
+      if ($(this).scrollTop() < OGheight3 && $("#achievements").css('position') == 'fixed') {
+        $("#skills").css({'position':'static', 'top':'0px'});
       }
       if ($(this).scrollTop() < OGheight2 && $("#achievements").css('position') == 'fixed') {
         $("#achievements").css({'position':'static', 'top':'0px'});
