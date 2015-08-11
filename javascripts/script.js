@@ -44,8 +44,9 @@ function loadFunction2() {
 $(window).scroll(function() {
   try {
     if (!scrolling) {
-      if ($(this).scrollTop() > $("#skills").position().top && $("#skills").css('position') != fixed) {
-        $("#skills").css({'position':'fixed', 'top':'0px', 'background-color':'#ffffff', 'width':'90%', 'padding':'0', 'margin':'0'});
+      /*if ($(this).scrollTop() > $("#skills").position().top && $("#skills").css('position') != 'fixed') {
+        console.log("Here");
+        $("#skills").css({'position':'fixed', 'top':'0px', 'background-color':'#ffffff', 'width':'90%', 'padding':'0', 'margin':'0'});      }
       }
       else if ($(this).scrollTop() > $("#achievements").position().top && $("#achievements").css('position') != 'fixed') {
         $("#achievements").css({'position':'fixed', 'top':'0px', 'background-color':'#ffffff', 'width':'90%', 'padding':'0', 'margin':'0'});
@@ -61,7 +62,7 @@ $(window).scroll(function() {
       }
       if ($(this).scrollTop() < OGheight && $("#experiences").css('position') == 'fixed') {
         $("#experiences").css({'position':'static', 'top':'0px'});
-      }
+      }*/
       $height = window.innerHeight / 2 - 40;
     }
   }
