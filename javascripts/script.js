@@ -1,4 +1,4 @@
-var updatedAt = "Updated 10-22-2015";
+var updatedAt = "Updated 10-27-2015";
 var metas = document.getElementsByTagName('meta');
 var num;
 var scrolling = false;
