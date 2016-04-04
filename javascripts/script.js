@@ -1,4 +1,4 @@
-var updatedAt = "Updated 2-17-2016";
+var updatedAt = "Updated 4-3-2016";
 var metas = document.getElementsByTagName('meta');
 var num;
 var scrolling = false;
@@ -70,6 +70,20 @@ $(window).scroll(function() {
 
   }
 });
+
+function clicked(i) {
+  var div = "";
+  if (i == 0) {
+    div = "#experiences";
+  } else if (i == 1) {
+    div = "#achievements";
+  } else if (i == 2) {
+    div = "#skills";
+  };
+  $('html, body').animate({
+            scrollTop: $(div).offset().top
+        }, 'slow');
+}
 
 function goToTop() {
   $('#toTop').fadeOut();
